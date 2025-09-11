@@ -3,7 +3,7 @@ import "./App.css";
 function App() {
   return (
     <>
-      <header>
+      <div className="main-container">
         <nav className="navbar container">
           <ul>
             <li>
@@ -20,10 +20,8 @@ function App() {
             </li>
           </ul>
         </nav>
-      </header>
 
-      {/* <!-- Main Content --> */}
-      <main>
+        {/* <!-- Main Content --> */}
         <section className="about-me container">
           <h1>About Me</h1>
           <p>
@@ -46,13 +44,31 @@ function App() {
           />
         </section>
 
-        <section className="skills container">
+        <section className="skills-section container">
           <h2>Skills</h2>
-          <div>
-            <p>Coding</p>
-            <p>Football</p>
-            <p>Java</p>
-            <p>JavaScript</p>
+          <div className="skills-list">
+            <h4>Programming Languages</h4>
+            <div className="languages skills">
+              <p>Java</p>
+              <p>JavaScript</p>
+              <p>TypeScript</p>
+              <p>Python</p>
+            </div>
+            <h4>Frameworks & Libraries</h4>
+            <div className="tools skills">
+              <p>HTML</p>
+              <p>CSS</p>
+              <p>React</p>
+              <p>JavaFX</p>
+              <p>Supabase</p>
+            </div>
+            <h4>Tools & Platforms</h4>
+            <div className="tools skills">
+              <p>Git</p>
+              <p>GitHub</p>
+              <p>VS Code</p>
+              <p>IntelliJ IDEA</p>
+            </div>
           </div>
         </section>
 
@@ -74,12 +90,12 @@ function App() {
           <h2>Contact me</h2>
           <p>This is a placeholder for the main content.</p>
         </section>
-      </main>
 
-      {/* <!-- Footer --> */}
-      <footer>
-        <p>© 2025 My Website. All rights reserved.</p>
-      </footer>
+        {/* <!-- Footer --> */}
+        <footer>
+          <p>© 2025 My Website. All rights reserved.</p>
+        </footer>
+      </div>
     </>
   );
 }
