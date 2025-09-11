@@ -60,7 +60,7 @@ function App() {
               <p>CSS</p>
               <p>React</p>
               <p>JavaFX</p>
-              <p>Supabase</p>
+              <p>SupaBase</p>
             </div>
             <h4>Tools & Platforms</h4>
             <div className="tools skills">
@@ -72,12 +72,74 @@ function App() {
           </div>
         </section>
 
-        <section className="projects container">
+        <section className="projects-section container">
           <h2>My Projects</h2>
-          <div>
-            <div>Image</div>
-            <div>Description</div>
-            <div>link</div>
+          <div className="projects">
+            <div className="chronopanthers project">
+              <img
+                id="chronopanthers-pic"
+                src="./src/assets/CP.jpeg"
+                alt="ChronoPanthers"
+              />
+              <h4>
+                <a href="https://github.com/sahishnuk2/ChronoPanthers">
+                  ChronoPanthers Pomodoro
+                </a>
+              </h4>
+              <p>
+                A Pomodoro Timer desktop app developed in collaboration with a
+                partner to enhance focus and productivity. The application
+                includes a customizable timer, task manager, AI study assistant,
+                and a productivity tracker with visual charts. The UI was built
+                with JavaFX, while Supabase was integrated to manage data
+                storage and persistence.
+              </p>
+              <div className="project-footer">
+                <div className="tech">
+                  <p>Java</p>
+                  <p>JavaFX</p>
+                  <p>SupaBase</p>
+                </div>
+                <div className="project-link">
+                  <a href="https://github.com/sahishnuk2/ChronoPanthers">
+                    link
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div className="chronopanthers project">
+              <img
+                id="chronopanthers-pic"
+                src="./src/assets/todolist.png"
+                alt="ChronoPanthers"
+              />
+              <h4>
+                <a href="https://todolist.sahishnu.dev">
+                  Personal Task Tracker
+                </a>
+              </h4>
+              <p>
+                A task management web application designed to help organize
+                academic tasks and deadlines, actively used by peers for
+                everyday productivity. Built with TypeScript and React, the app
+                leverages LocalStorage for client-side data persistence. Key
+                features include task creation, prioritization, sorting, and
+                completion tracking, all presented through a responsive and
+                intuitive interface optimized for both desktop and mobile
+                devices.
+              </p>
+              <div className="project-footer">
+                <div className="tech">
+                  <p>TypeScript</p>
+                  <p>React</p>
+                  <p>HTML</p>
+                  <p>CSS</p>
+                </div>
+                <div className="project-link">
+                  <a href="https://github.com/sahishnuk2/my-to-do-list">link</a>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 
@@ -93,7 +155,7 @@ function App() {
 
         {/* <!-- Footer --> */}
         <footer>
-          <p>© 2025 My Website. All rights reserved.</p>
+          <p>© 2025 Sahishnu Kumaar. All rights reserved.</p>
         </footer>
       </div>
     </>

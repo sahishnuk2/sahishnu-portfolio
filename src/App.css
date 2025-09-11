@@ -65,3 +65,55 @@
 .skills > p:hover {
   scale: 1.2;
 }
+
+/* Project Section */
+.projects-section {
+  background-color: lightblue;
+}
+
+.project {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px dashed blue;
+  margin: 10px;
+  background-color: aquamarine;
+}
+
+.project > p {
+  /* text-align: center; */
+  margin: 10px;
+}
+
+#chronopanthers-pic {
+  height: 200px;
+  width: 200px;
+  border: 2px solid black;
+  border-radius: 10%;
+  margin: 10px;
+}
+
+.project-footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  /* align-items: last baseline; */
+}
+
+.tech {
+  display: flex;
+  align-self: self-start;
+}
+
+.tech > p {
+  padding: 3px;
+  border: 1px solid black;
+  margin: 5px;
+  border-radius: 10px;
+  background-color: lightgray;
+}
+
+.project-link {
+  padding: 3px;
+  margin: 5px;
+}
