@@ -4,7 +4,7 @@ function App() {
   return (
     <>
       <header>
-        <nav>
+        <nav className="navbar container">
           <ul>
             <li>
               <a href="#">Home</a>
@@ -24,15 +24,29 @@ function App() {
 
       {/* <!-- Main Content --> */}
       <main>
-        <section>
+        <section className="about-me container">
           <h1>About Me</h1>
           <p>
-            I am Sahishnu. I'm currently a year 2 Computer Science Student
-            studying at NUS.
+            Hi, I’m Sahishnu. I’m a Year 2 Computer Science student at the
+            National University of Singapore (NUS), where I’m building my
+            foundations in software development and problem solving. I enjoy
+            tackling coding challenges on platforms like LeetCode, and I’m
+            always curious about learning new technologies that can turn ideas
+            into real projects.
+            <br /> <br />
+            Outside of academics, I love playing football and strategy-based
+            card games like Coup, which keep me active and sharpen my strategic
+            thinking. I’m always excited to connect with other coders, share
+            knowledge, and collaborate on projects that push our skills further.
           </p>
+          <img
+            id="my-photo"
+            src="./src/assets/user.png"
+            alt="Placeholder image of myself"
+          />
         </section>
 
-        <section id="skills">
+        <section className="skills container">
           <h2>Skills</h2>
           <div>
             <p>Coding</p>
@@ -42,7 +56,7 @@ function App() {
           </div>
         </section>
 
-        <section id="projects">
+        <section className="projects container">
           <h2>My Projects</h2>
           <div>
             <div>Image</div>
@@ -51,12 +65,12 @@ function App() {
           </div>
         </section>
 
-        <section>
+        <section className="resume container">
           <h2>Resume</h2>
           <p>This is a placeholder for the main content.</p>
         </section>
 
-        <section>
+        <section className="contact-me container">
           <h2>Contact me</h2>
           <p>This is a placeholder for the main content.</p>
         </section>

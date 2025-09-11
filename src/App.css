@@ -1,32 +1,23 @@
-section,
-footer,
-nav {
+/* Overall */
+.container {
   border: 1px solid black;
   margin: 10px;
   padding: 10px;
+}
+
+/* About me section */
+.about-me {
+  background-color: powderblue;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 95%;
 }
 
-#skills > div {
-  display: flex;
-  flex-direction: row;
+.about-me > img {
+  align-self: center;
+  padding: 20px;
 }
 
-#skills > div > p {
-  padding: 5px;
-  border: 1px solid black;
-  margin: 5px;
-  border-radius: 15%;
-}
-
-#projects > div {
-  width: 100%;
+#my-photo {
+  width: 300px;
   height: auto;
-  border: 1px solid black;
-  padding: 10px;
-  margin: 10px;
 }
