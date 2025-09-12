@@ -23,7 +23,7 @@ function App() {
 
         {/* <!-- Main Content --> */}
         <section className="about-me container">
-          <h1>About Me</h1>
+          <h1>Welcome</h1>
           <p>
             Hi, I’m Sahishnu. I’m a Year 2 Computer Science student at the
             National University of Singapore (NUS), where I’m building my
@@ -176,13 +176,24 @@ function App() {
           </div>
         </section>
 
-        <section className="contact-me container">
-          <h2>Contact me</h2>
-          <p>Placeholder</p>
+        <section className="contact container">
+          <h2>Let's Connect</h2>
+          <div className="contact-contents">
+            <ul className="contact-options">
+              <li>
+                <a href="mailto:sk@sahishnu.dev">sk@sahishnu.dev</a>
+              </li>
+              <li>
+                <a href="https://github.com/sahishnuk2" target="_blank">
+                  github.com/sahishnuk2
+                </a>
+              </li>
+            </ul>
+          </div>
         </section>
 
         {/* <!-- Footer --> */}
-        <footer>
+        <footer className="container">
           <p>© 2025 Sahishnu Kumaar. All rights reserved.</p>
         </footer>
       </div>

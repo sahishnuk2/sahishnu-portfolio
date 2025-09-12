@@ -120,6 +120,7 @@
   margin: 5px;
 }
 
+/* Resume */
 .resume {
   background-color: lavenderblush;
   display: flex;
@@ -147,4 +148,33 @@
 
 .resume-button {
   align-self: last baseline;
+}
+
+/* Contact Me */
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: self-start;
+}
+
+.contact > h2 {
+  align-self: center;
+  /* margin: 10px; */
+}
+
+.contact-contents {
+  width: 100%;
+  margin: 10px;
+}
+
+.contact ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+/* Footer */
+footer {
+  text-align: center;
 }
