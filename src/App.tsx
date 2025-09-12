@@ -5,24 +5,32 @@ function App() {
     <>
       <div className="main-container">
         <nav className="navbar container">
+          <div className="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
           <ul>
             <li>
-              <a href="#">Home</a>
+              <a href="#about">About</a>
             </li>
             <li>
-              <a href="#">Page 1</a>
+              <a href="#skills">Skills</a>
             </li>
             <li>
-              <a href="#">Page 2</a>
+              <a href="#projects">Projects</a>
             </li>
             <li>
-              <a href="#">Contact</a>
+              <a href="#resume">Resume</a>
+            </li>
+            <li>
+              <a href="#contact">Contact</a>
             </li>
           </ul>
         </nav>
 
         {/* <!-- Main Content --> */}
-        <section className="about-me container">
+        <section id="about" className="about-me container">
           <h1>Welcome</h1>
           <p>
             Hi, I’m Sahishnu. I’m a Year 2 Computer Science student at the
@@ -44,7 +52,7 @@ function App() {
           />
         </section>
 
-        <section className="skills-section container">
+        <section id="skills" className="skills-section container">
           <h2>Skills</h2>
           <div className="skills-list">
             <h4>Programming Languages</h4>
@@ -72,7 +80,7 @@ function App() {
           </div>
         </section>
 
-        <section className="projects-section container">
+        <section id="projects" className="projects-section container">
           <h2>My Projects</h2>
           <div className="projects">
             <div className="chronopanthers project">
@@ -143,7 +151,7 @@ function App() {
           </div>
         </section>
 
-        <section className="resume container">
+        <section id="resume" className="resume container">
           <h2>Resume</h2>
           <p id="overview">
             Here’s a quick overview of my academic background. For more details,
@@ -176,7 +184,7 @@ function App() {
           </div>
         </section>
 
-        <section className="contact container">
+        <section id="contact" className="contact container">
           <h2>Let's Connect</h2>
           <div className="contact-contents">
             <ul className="contact-options">
