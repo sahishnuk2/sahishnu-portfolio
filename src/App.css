@@ -19,6 +19,7 @@ html {
   width: 90%;
   height: auto;
   background-color: #f8fafc;
+  border-radius: 10px;
 }
 
 a {
