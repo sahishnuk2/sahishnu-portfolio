@@ -41,7 +41,7 @@ function App() {
         {/* <!-- Main Content --> */}
         <section id="about" className="about-me container">
           <h1>Welcome</h1>
-          <p>
+          <p id="description">
             Hi, I’m Sahishnu. I’m a Year 2 Computer Science student at the
             National University of Singapore (NUS), where I’m building my
             foundations in software development and problem solving. I enjoy
