@@ -3,7 +3,6 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  align-items: center;
 }
 
 .container {
@@ -69,6 +68,9 @@
 /* Project Section */
 .projects-section {
   background-color: lightblue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .project {
@@ -116,4 +118,33 @@
 .project-link {
   padding: 3px;
   margin: 5px;
+}
+
+.resume {
+  background-color: lavenderblush;
+  display: flex;
+  flex-direction: column;
+  align-items: self-start;
+}
+
+.resume > h2 {
+  align-self: center;
+}
+
+.resume > p {
+  padding: 10px;
+  margin: 10px;
+}
+
+.resume-content {
+  width: 100%;
+  padding: 0 10px 10px 10px;
+  margin: 0 10px 10px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: space-between;
+}
+
+.resume-button {
+  align-self: last baseline;
 }

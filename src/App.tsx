@@ -145,12 +145,40 @@ function App() {
 
         <section className="resume container">
           <h2>Resume</h2>
-          <p>This is a placeholder for the main content.</p>
+          <p id="overview">
+            Here’s a quick overview of my academic background. For more details,
+            you can download my full resume below.
+          </p>
+          <div className="resume-content">
+            <div className="education">
+              <h3>Education</h3>
+              <p>
+                <strong>National University of Singapore (NUS)</strong>
+                <br />
+                B.Comp. in Computer Science, Year 2<br />
+                Aug 2023 – Present
+                <br />
+                <br />
+                <strong>Course Highlights:</strong> Programming Methodology,
+                Data Structures, Algorithms, Software Engineering
+                <br />
+                <br />
+                Dean’s List - AY2024/2025 Semester 2
+              </p>
+            </div>
+            <a
+              href="./src/assets/Sahishnu_Kumaar_Resume.pdf"
+              download
+              className="resume-button"
+            >
+              Download Resume
+            </a>
+          </div>
         </section>
 
         <section className="contact-me container">
           <h2>Contact me</h2>
-          <p>This is a placeholder for the main content.</p>
+          <p>Placeholder</p>
         </section>
 
         {/* <!-- Footer --> */}
