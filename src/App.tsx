@@ -6,7 +6,13 @@ function App() {
       <div className="main-container">
         <nav className="navbar container">
           <div className="logo">
-            <img src="/s-favicon.svg" alt="S Logo" className="s-logo" width="40" height="40" />
+            <img
+              src="/s-favicon.svg"
+              alt="S Logo"
+              className="s-logo"
+              width="40"
+              height="40"
+            />
           </div>
           <div className="hamburger">
             <span></span>
@@ -50,7 +56,7 @@ function App() {
           </p>
           <img
             id="my-photo"
-            src="./src/assets/user.png"
+            src="./user.png"
             alt="Placeholder image of myself"
           />
         </section>
@@ -89,7 +95,7 @@ function App() {
             <div className="chronopanthers project">
               <img
                 id="chronopanthers-pic"
-                src="./src/assets/CP.jpeg"
+                src="./CP.jpeg"
                 alt="ChronoPanthers"
               />
               <h4>
@@ -118,10 +124,10 @@ function App() {
                 </div>
               </div>
             </div>
-            <div className="chronopanthers project">
+            <div className="todolist project">
               <img
                 id="chronopanthers-pic"
-                src="./src/assets/todolist.png"
+                src="./todolist.png"
                 alt="ChronoPanthers"
               />
               <h4>
