@@ -5,6 +5,9 @@ function App() {
     <>
       <div className="main-container">
         <nav className="navbar container">
+          <div className="logo">
+            <img src="/s-favicon.svg" alt="S Logo" className="s-logo" width="40" height="40" />
+          </div>
           <div className="hamburger">
             <span></span>
             <span></span>

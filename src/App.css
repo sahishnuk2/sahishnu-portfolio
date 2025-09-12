@@ -33,6 +33,20 @@ a {
   padding: 1rem;
 }
 
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.s-logo {
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.s-logo:hover {
+  transform: scale(1.1);
+}
+
 .navbar ul {
   display: flex;
   list-style: none;
@@ -70,6 +84,17 @@ a {
 
 /* Mobile styles */
 @media (max-width: 768px) {
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    background-color: #f8fafc;
+    z-index: 100;
+    border-bottom: 1px solid #e2e8f0;
+  }
+
   .navbar ul {
     display: none;
     position: fixed;
@@ -89,14 +114,6 @@ a {
 
   .hamburger {
     display: flex;
-  }
-
-  .navbar {
-    position: sticky;
-    top: 0;
-    background-color: #f8fafc;
-    z-index: 100;
-    border-bottom: 1px solid #e2e8f0;
   }
 }
 
@@ -118,6 +135,7 @@ a {
 }
 
 #my-photo {
+  display: none; /* need to find a good pic of myself to remove this */
   width: 300px;
   height: auto;
   border-radius: 10%;
