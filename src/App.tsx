@@ -94,7 +94,7 @@ function App() {
           <div className="projects">
             <div className="chronopanthers project">
               <img
-                id="chronopanthers-pic"
+                className="project-pics"
                 src="./CP.jpeg"
                 alt="ChronoPanthers"
               />
@@ -126,7 +126,7 @@ function App() {
             </div>
             <div className="todolist project">
               <img
-                id="chronopanthers-pic"
+                className="project-pics"
                 src="./todolist.png"
                 alt="ChronoPanthers"
               />
@@ -136,14 +136,11 @@ function App() {
                 </a>
               </h4>
               <p>
-                A task management web application designed to help organize
-                academic tasks and deadlines, actively used by peers for
-                everyday productivity. Built with TypeScript and React, the app
-                leverages LocalStorage for client-side data persistence. Key
-                features include task creation, prioritization, sorting, and
-                completion tracking, all presented through a responsive and
-                intuitive interface optimized for both desktop and mobile
-                devices.
+                A task management web app built with TypeScript and React,
+                actively used by peers to manage academic deadlines and enhance
+                productivity. It offers task creation, prioritisation, sorting,
+                and completion tracking, with LocalStorage for data persistence
+                and a responsive, user-friendly interface across devices.
               </p>
               <div className="project-footer">
                 <div className="tech">
@@ -154,6 +151,34 @@ function App() {
                 </div>
                 <div className="project-link">
                   <a href="https://github.com/sahishnuk2/my-to-do-list">link</a>
+                </div>
+              </div>
+            </div>
+            <div className="cs2103t-ip project">
+              <img
+                className="project-pics"
+                src="./sharva.png"
+                alt="Sharva Chatbot"
+              />
+              <h4>
+                <a href="https://sahishnuk2.github.io/ip/">
+                  Sharva Task Manager Chatbot
+                </a>
+              </h4>
+              <p>
+                Sharva is a powerful yet simple task management chatbot built
+                with Java and JavaFX. It helps you efficiently manage your daily
+                tasks through a clean text-based chat interface with a graphical
+                UI. Sharva provides an effective solution for organizing todos,
+                deadlines, and events.
+              </p>
+              <div className="project-footer">
+                <div className="tech">
+                  <p>Java</p>
+                  <p>JavaFX</p>
+                </div>
+                <div className="project-link">
+                  <a href="https://github.com/sahishnuk2/ip">link</a>
                 </div>
               </div>
             </div>
@@ -173,7 +198,7 @@ function App() {
                 <strong>National University of Singapore (NUS)</strong>
                 <br />
                 B.Comp. in Computer Science, Year 2<br />
-                Aug 2023 – Present
+                Aug 2024 – Present
                 <br />
                 <br />
                 <strong>Course Highlights:</strong> Programming Methodology,
