@@ -209,7 +209,7 @@ function App() {
               </p>
             </div>
             <a
-              href="./src/assets/Sahishnu_Kumaar_Resume.pdf"
+              href="/Sahishnu_Kumaar_Resume.pdf"
               download
               className="resume-button"
             >
