@@ -77,6 +77,7 @@ function App() {
               <p>CSS</p>
               <p>React</p>
               <p>JavaFX</p>
+              <p>JUnit</p>
               <p>SupaBase</p>
             </div>
             <h4>Tools & Platforms</h4>
@@ -260,6 +261,14 @@ function App() {
               <li>
                 <a href="https://github.com/sahishnuk2" target="_blank">
                   github.com/sahishnuk2
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.linkedin.com/in/sahishnu-kumaar-0b4382393"
+                  target="_blank"
+                >
+                  LinkedIn
                 </a>
               </li>
             </ul>
