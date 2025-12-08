@@ -176,9 +176,41 @@ function App() {
                 <div className="tech">
                   <p>Java</p>
                   <p>JavaFX</p>
+                  <p>JUnit</p>
                 </div>
                 <div className="project-link">
                   <a href="https://github.com/sahishnuk2/ip">link</a>
+                </div>
+              </div>
+            </div>
+            <div className="cs2103t-tp project">
+              <img
+                className="project-pics"
+                src="./lambdalab.png"
+                alt="LambdaLab"
+              />
+              <h4>
+                <a href="https://ay2526s1-cs2103t-t09-3.github.io/tp/">
+                  LambdaLab — TA Management Application
+                </a>
+              </h4>
+              <p>
+                A teaching assistant management desktop app built
+                collaboratively as part of the CS2103T module. The application
+                supports lab attendance tracking, exercise progress monitoring,
+                and student performance management through a seamless CLI+GUI
+                interface, developed using Java and JavaFX.
+              </p>
+              <div className="project-footer">
+                <div className="tech">
+                  <p>Java</p>
+                  <p>JavaFX</p>
+                  <p>JUnit</p>
+                </div>
+                <div className="project-link">
+                  <a href="https://github.com/AY2526S1-CS2103T-T09-3/tp">
+                    link
+                  </a>
                 </div>
               </div>
             </div>
