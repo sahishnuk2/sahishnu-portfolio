@@ -23,11 +23,19 @@ export default function Navbar() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center">
-            <img
-              src="/s-favicon.svg"
-              alt="S Logo"
-              className="w-10 h-10 hover:opacity-80 transition-opacity"
-            />
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="40"
+              height="40"
+              viewBox="0 0 32 32"
+              className="hover:opacity-80 transition-opacity"
+            >
+              <path
+                d="M24 8 C24 4, 20 4, 16 4 C12 4, 8 6, 8 10 C8 12, 10 14, 14 14 C18 14, 20 16, 20 18 C20 20, 18 22, 14 22 C10 22, 8 20, 8 16 L4 16 C4 24, 8 28, 14 28 C20 28, 24 24, 24 18 C24 16, 22 14, 18 14 C14 14, 12 12, 12 10 C12 8, 14 6, 16 6 C18 6, 20 8, 20 12 L24 12 C24 4, 20 4, 16 4 Z"
+                fill="currentColor"
+                className="text-teal-600 dark:text-vscode-accent"
+              />
+            </svg>
           </Link>
 
           {/* Desktop Navigation */}

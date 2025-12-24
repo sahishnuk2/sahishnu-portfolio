@@ -19,9 +19,10 @@ export default function About() {
 
             <p>
               Outside of academics, I love playing football and strategy-based
-              card games like Coup, which keep me active and sharpen my strategic
-              thinking. I'm always excited to connect with other coders, share
-              knowledge, and collaborate on projects that push our skills further.
+              card games like Coup, which keep me active and sharpen my
+              strategic thinking. I'm always excited to connect with other
+              coders, share knowledge, and collaborate on projects that push our
+              skills further.
             </p>
           </div>
 
@@ -36,7 +37,14 @@ export default function About() {
                   Programming Languages
                 </h3>
                 <div className="flex flex-wrap gap-2">
-                  {['Java', 'JavaScript', 'TypeScript', 'Go', 'Python', 'C'].map((lang) => (
+                  {[
+                    "Java",
+                    "JavaScript",
+                    "TypeScript",
+                    "Go",
+                    "Python",
+                    "C",
+                  ].map((lang) => (
                     <span
                       key={lang}
                       className="px-4 py-2 bg-teal-50 dark:bg-vscode-bg-lighter text-teal-700 dark:text-vscode-accent rounded-lg text-sm font-medium hover:bg-teal-100 dark:hover:bg-vscode-bg-lightest hover:scale-105 transition-all cursor-default"
@@ -52,7 +60,14 @@ export default function About() {
                   Web Technologies & Frameworks
                 </h3>
                 <div className="flex flex-wrap gap-2">
-                  {['React', 'HTML', 'CSS', 'JavaFX', 'JUnit', 'Material UI'].map((tech) => (
+                  {[
+                    "React",
+                    "HTML",
+                    "CSS",
+                    "JavaFX",
+                    "JUnit",
+                    "Material UI",
+                  ].map((tech) => (
                     <span
                       key={tech}
                       className="px-4 py-2 bg-teal-50 dark:bg-vscode-bg-lighter text-teal-700 dark:text-vscode-accent rounded-lg text-sm font-medium hover:bg-teal-100 dark:hover:bg-vscode-bg-lightest hover:scale-105 transition-all cursor-default"
@@ -68,7 +83,7 @@ export default function About() {
                   Backend & Databases
                 </h3>
                 <div className="flex flex-wrap gap-2">
-                  {['PostgreSQL (Supabase)'].map((tech) => (
+                  {["PostgreSQL (Supabase)"].map((tech) => (
                     <span
                       key={tech}
                       className="px-4 py-2 bg-teal-50 dark:bg-vscode-bg-lighter text-teal-700 dark:text-vscode-accent rounded-lg text-sm font-medium hover:bg-teal-100 dark:hover:bg-vscode-bg-lightest hover:scale-105 transition-all cursor-default"
@@ -84,7 +99,14 @@ export default function About() {
                   Tools & Platforms
                 </h3>
                 <div className="flex flex-wrap gap-2">
-                  {['Git', 'GitHub', 'Visual Studio Code', 'IntelliJ IDEA', 'Render', 'Vercel'].map((tool) => (
+                  {[
+                    "Git",
+                    "GitHub",
+                    "Visual Studio Code",
+                    "IntelliJ IDEA",
+                    "Render",
+                    "Vercel",
+                  ].map((tool) => (
                     <span
                       key={tool}
                       className="px-4 py-2 bg-teal-50 dark:bg-vscode-bg-lighter text-teal-700 dark:text-vscode-accent rounded-lg text-sm font-medium hover:bg-teal-100 dark:hover:bg-vscode-bg-lightest hover:scale-105 transition-all cursor-default"

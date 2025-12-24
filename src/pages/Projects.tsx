@@ -3,9 +3,12 @@ interface Project {
   description: string;
   techStack: string[];
   period: string;
-  link: string;
   image: string;
-  isGithub: boolean;
+  links: {
+    github?: string;
+    live?: string;
+    docs?: string;
+  };
 }
 
 export default function Projects() {
@@ -16,9 +19,12 @@ export default function Projects() {
         "Building a full-stack discussion platform with user authentication, topic-based threads, and RESTful APIs. Developing backend services in Go with PostgreSQL, alongside a clean and intuitive React-based user interface for browsing and participating in discussions.",
       techStack: ["Go", "PostgreSQL", "React"],
       period: "Dec 2025 – Present",
-      link: "https://github.com/sahishnuk2/web-forum",
       image: "/forum.png",
-      isGithub: true,
+      links: {
+        github: "https://github.com/sahishnuk2/web-forum",
+        live: "https://forum.sahishnu.dev",
+        // docs: "Add docs URL here if you have one",
+      },
     },
     {
       title: "LambdaLab – Teaching Assistant Management App",
@@ -26,9 +32,11 @@ export default function Projects() {
         "Implemented core features for a desktop application used by teaching assistants to manage student information, attendance, and progress tracking. Developed data processing, sorting, validation logic, and automated tests to ensure reliability and accuracy.",
       techStack: ["Java", "JavaFX", "JUnit"],
       period: "Sep 2025 – Nov 2025",
-      link: "https://ay2526s1-cs2103t-t09-3.github.io/tp/",
       image: "/lambdalab.png",
-      isGithub: false,
+      links: {
+        github: "https://github.com/AY2526S1-CS2103T-T09-3/tp",
+        docs: "https://ay2526s1-cs2103t-t09-3.github.io/tp/",
+      },
     },
     {
       title: "Sharva Task Manager Chatbot",
@@ -36,9 +44,11 @@ export default function Projects() {
         "Sharva is a powerful yet simple task management chatbot built with Java and JavaFX. It helps you efficiently manage your daily tasks through a clean text-based chat interface with a graphical UI. Sharva provides an effective solution for organizing todos, deadlines, and events.",
       techStack: ["Java", "JavaFX", "JUnit"],
       period: "Aug 2025 – Sep 2025",
-      link: "https://sahishnuk2.github.io/ip/",
       image: "/sharva.png",
-      isGithub: false,
+      links: {
+        github: "https://github.com/sahishnuk2/ip",
+        docs: "https://sahishnuk2.github.io/ip/",
+      },
     },
     {
       title: "Personal Task Tracker",
@@ -46,9 +56,11 @@ export default function Projects() {
         "Developed a lightweight task manager with LocalStorage persistence, actively used by peers for tracking academic tasks and deadlines. Implemented task creation, prioritisation, sorting, and completion workflows with a responsive and React-based UI.",
       techStack: ["TypeScript", "React", "HTML", "CSS"],
       period: "Aug 2025 – Sep 2025",
-      link: "https://todolist.sahishnu.dev",
       image: "/todolist.png",
-      isGithub: false,
+      links: {
+        github: "https://github.com/sahishnuk2/my-to-do-list",
+        live: "https://todolist.sahishnu.dev",
+      },
     },
     {
       title: "ChronoPanthers – Productivity Desktop App",
@@ -56,9 +68,11 @@ export default function Projects() {
         "Developed a desktop productivity application combining a Pomodoro timer, task management, and an AI-assisted study feature with productivity analytics. Designed a responsive JavaFX UI, implemented visual charts, and integrated Supabase for persistent data storage.",
       techStack: ["Java", "JavaFX", "Supabase"],
       period: "May 2025 – Aug 2025",
-      link: "https://github.com/sahishnuk2/ChronoPanthers",
       image: "/CP.jpeg",
-      isGithub: true,
+      links: {
+        github: "https://github.com/sahishnuk2/ChronoPanthers",
+        docs: "https://drive.google.com/file/d/1B0V0AvPQNtvGXyJtmNViP4UKkRY_ya0y/view",
+      },
     },
   ];
 
@@ -116,18 +130,26 @@ export default function Projects() {
 
                     {/* Title */}
                     <h3 className="text-xl font-bold text-gray-900 dark:text-vscode-text mb-3">
-                      {project.link !== "#" ? (
-                        <a
-                          href={project.link}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="hover:text-teal-600 dark:hover:text-vscode-accent transition-colors"
-                        >
-                          {project.title}
-                        </a>
-                      ) : (
-                        project.title
-                      )}
+                      {(() => {
+                        // Priority: Live Demo → Docs → GitHub
+                        const titleLink =
+                          project.links.live ||
+                          project.links.docs ||
+                          project.links.github;
+
+                        return titleLink ? (
+                          <a
+                            href={titleLink}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="hover:text-teal-600 dark:hover:text-vscode-accent transition-colors hover:underline"
+                          >
+                            {project.title}
+                          </a>
+                        ) : (
+                          project.title
+                        );
+                      })()}
                     </h3>
 
                     {/* Description */}
@@ -147,16 +169,38 @@ export default function Projects() {
                       ))}
                     </div>
 
-                    {/* GitHub icon and project link */}
-                    <div className="flex justify-between items-center">
-                      {project.link !== "#" && (
+                    {/* Project Links */}
+                    <div className="flex flex-wrap gap-3 mt-4">
+                      {project.links.github && (
                         <a
-                          href={project.link}
+                          href={project.links.github}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-flex items-center gap-2 text-teal-600 dark:text-vscode-accent hover:text-teal-800 dark:hover:text-vscode-accent-hover font-medium transition-colors"
+                          className="inline-flex items-center gap-2 px-4 py-2 bg-gray-900 dark:bg-gray-800 text-white rounded-lg hover:bg-gray-800 dark:hover:bg-gray-700 transition-colors text-sm font-medium"
+                          title="View on GitHub"
                         >
-                          View Project
+                          <svg
+                            className="w-4 h-4"
+                            fill="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              fillRule="evenodd"
+                              d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                              clipRule="evenodd"
+                            />
+                          </svg>
+                          GitHub
+                        </a>
+                      )}
+                      {project.links.live && (
+                        <a
+                          href={project.links.live}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-2 px-4 py-2 bg-teal-600 dark:bg-vscode-accent text-white rounded-lg hover:bg-teal-700 dark:hover:bg-vscode-accent-hover transition-colors text-sm font-medium"
+                          title="View Live Demo"
+                        >
                           <svg
                             className="w-4 h-4"
                             fill="none"
@@ -170,27 +214,33 @@ export default function Projects() {
                               d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
                             />
                           </svg>
+                          Live Demo
                         </a>
                       )}
-                      <a
-                        href={project.link !== "#" ? project.link : "#"}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="ml-auto text-gray-600 dark:text-vscode-text-muted hover:text-teal-600 dark:hover:text-vscode-accent transition-colors"
-                        title="View on GitHub"
-                      >
-                        <svg
-                          className="w-6 h-6"
-                          fill="currentColor"
-                          viewBox="0 0 24 24"
+                      {project.links.docs && (
+                        <a
+                          href={project.links.docs}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-2 px-4 py-2 bg-blue-600 dark:bg-blue-700 text-white rounded-lg hover:bg-blue-700 dark:hover:bg-blue-600 transition-colors text-sm font-medium"
+                          title="View Documentation"
                         >
-                          <path
-                            fillRule="evenodd"
-                            d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
-                            clipRule="evenodd"
-                          />
-                        </svg>
-                      </a>
+                          <svg
+                            className="w-4 h-4"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth={2}
+                              d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                            />
+                          </svg>
+                          Docs
+                        </a>
+                      )}
                     </div>
                   </div>
                 </div>
