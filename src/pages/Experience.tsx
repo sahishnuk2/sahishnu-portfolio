@@ -1,5 +1,16 @@
 export default function Experience() {
-  const experience = {
+  const teachingExperience = {
+    role: 'Teaching Assistant, CS2030S – Programming Methodology II',
+    organization: 'National University of Singapore',
+    period: 'Jan 2026 – Present',
+    responsibilities: [
+      'Conducting lab sessions and consultations for undergraduate students',
+      'Grading programming assignments and providing constructive feedback',
+      'Explaining complex programming concepts and guiding students through problem-solving',
+    ],
+  };
+
+  const workExperience = {
     role: 'HQ 9 Div/Inf G2 Branch ASA',
     organization: 'Singapore Armed Forces (SAF)',
     period: 'July 2022 – May 2024',
@@ -12,7 +23,11 @@ export default function Experience() {
     awardDescription: 'Awarded for outstanding leadership, discipline, and initiative',
   };
 
-  const skills = [
+  const transferableSkills = [
+    {
+      category: 'Teaching & Communication',
+      items: ['Clear Communication', 'Structured Problem-Solving', 'Mentoring & Guidance'],
+    },
     {
       category: 'Leadership & Coordination',
       items: ['Team Leadership', 'Stakeholder Management', 'Inter-departmental Communication'],
@@ -31,59 +46,106 @@ export default function Experience() {
     <div className="min-h-screen bg-white dark:bg-vscode-bg">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <h1 className="text-4xl font-bold text-gray-900 dark:text-vscode-text mb-4">
-          Work Experience
+          Experience
         </h1>
         <p className="text-lg text-gray-600 dark:text-vscode-text-muted mb-12">
-          Professional experience demonstrating leadership, coordination, and responsibility
+          Professional and teaching experience demonstrating technical expertise, leadership, and communication skills
         </p>
 
-        {/* Experience Card */}
-        <div className="bg-gradient-to-br from-teal-50 to-blue-50 dark:from-vscode-bg-lighter dark:to-vscode-bg-lightest p-8 rounded-lg border-2 border-gray-200 dark:border-vscode-border mb-12">
-          <div className="flex flex-col md:flex-row justify-between items-start mb-6">
-            <div>
-              <h2 className="text-2xl font-bold text-gray-900 dark:text-vscode-text">
-                {experience.role}
-              </h2>
-              <p className="text-lg text-teal-700 dark:text-vscode-accent font-medium mt-1">
-                {experience.organization}
-              </p>
-            </div>
-            <span className="text-gray-600 dark:text-vscode-text-muted mt-2 md:mt-0">
-              {experience.period}
-            </span>
-          </div>
-
-          {/* Responsibilities */}
-          <div className="space-y-3 mb-6">
-            {experience.responsibilities.map((responsibility, index) => (
-              <div key={index} className="flex items-start gap-3">
-                <svg
-                  className="w-5 h-5 text-teal-600 dark:text-vscode-accent mt-0.5 flex-shrink-0"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                    clipRule="evenodd"
-                  />
-                </svg>
-                <p className="text-gray-700 dark:text-vscode-text">{responsibility}</p>
-              </div>
-            ))}
-          </div>
-
-          {/* Award */}
-          <div className="bg-white dark:bg-vscode-bg p-4 rounded-lg border border-teal-200 dark:border-vscode-accent">
-            <div className="flex items-start gap-3">
-              <span className="text-2xl">🏆</span>
+        {/* Teaching Experience Section */}
+        <div className="mb-16">
+          <h2 className="text-3xl font-bold text-gray-900 dark:text-vscode-text mb-6">
+            Teaching Experience
+          </h2>
+          <div className="bg-gradient-to-br from-teal-50 to-blue-50 dark:from-vscode-bg-lighter dark:to-vscode-bg-lightest p-8 rounded-lg border-2 border-gray-200 dark:border-vscode-border">
+            <div className="flex flex-col md:flex-row justify-between items-start mb-6">
               <div>
-                <h3 className="text-lg font-bold text-gray-900 dark:text-vscode-text">
-                  {experience.award}
+                <h3 className="text-2xl font-bold text-gray-900 dark:text-vscode-text">
+                  {teachingExperience.role}
                 </h3>
-                <p className="text-gray-600 dark:text-vscode-text-muted">
-                  {experience.awardDescription}
+                <p className="text-lg text-teal-700 dark:text-vscode-accent font-medium mt-1">
+                  {teachingExperience.organization}
                 </p>
+              </div>
+              <span className="text-gray-600 dark:text-vscode-text-muted mt-2 md:mt-0">
+                {teachingExperience.period}
+              </span>
+            </div>
+
+            {/* Responsibilities */}
+            <div className="space-y-3">
+              {teachingExperience.responsibilities.map((responsibility, index) => (
+                <div key={index} className="flex items-start gap-3">
+                  <svg
+                    className="w-5 h-5 text-teal-600 dark:text-vscode-accent mt-0.5 flex-shrink-0"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                      clipRule="evenodd"
+                    />
+                  </svg>
+                  <p className="text-gray-700 dark:text-vscode-text">{responsibility}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Work Experience Section */}
+        <div className="mb-16">
+          <h2 className="text-3xl font-bold text-gray-900 dark:text-vscode-text mb-6">
+            Work Experience
+          </h2>
+          <div className="bg-gradient-to-br from-teal-50 to-blue-50 dark:from-vscode-bg-lighter dark:to-vscode-bg-lightest p-8 rounded-lg border-2 border-gray-200 dark:border-vscode-border">
+            <div className="flex flex-col md:flex-row justify-between items-start mb-6">
+              <div>
+                <h3 className="text-2xl font-bold text-gray-900 dark:text-vscode-text">
+                  {workExperience.role}
+                </h3>
+                <p className="text-lg text-teal-700 dark:text-vscode-accent font-medium mt-1">
+                  {workExperience.organization}
+                </p>
+              </div>
+              <span className="text-gray-600 dark:text-vscode-text-muted mt-2 md:mt-0">
+                {workExperience.period}
+              </span>
+            </div>
+
+            {/* Responsibilities */}
+            <div className="space-y-3 mb-6">
+              {workExperience.responsibilities.map((responsibility, index) => (
+                <div key={index} className="flex items-start gap-3">
+                  <svg
+                    className="w-5 h-5 text-teal-600 dark:text-vscode-accent mt-0.5 flex-shrink-0"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                      clipRule="evenodd"
+                    />
+                  </svg>
+                  <p className="text-gray-700 dark:text-vscode-text">{responsibility}</p>
+                </div>
+              ))}
+            </div>
+
+            {/* Award */}
+            <div className="bg-white dark:bg-vscode-bg p-4 rounded-lg border border-teal-200 dark:border-vscode-accent">
+              <div className="flex items-start gap-3">
+                <span className="text-2xl">🏆</span>
+                <div>
+                  <h4 className="text-lg font-bold text-gray-900 dark:text-vscode-text">
+                    {workExperience.award}
+                  </h4>
+                  <p className="text-gray-600 dark:text-vscode-text-muted">
+                    {workExperience.awardDescription}
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -94,8 +156,8 @@ export default function Experience() {
           <h2 className="text-3xl font-bold text-gray-900 dark:text-vscode-text mb-8">
             Transferable Skills
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {skills.map((skillGroup, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {transferableSkills.map((skillGroup, index) => (
               <div
                 key={index}
                 className="bg-white dark:bg-vscode-bg-lighter p-6 rounded-lg border border-gray-200 dark:border-vscode-border"

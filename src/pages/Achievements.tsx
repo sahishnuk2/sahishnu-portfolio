@@ -7,6 +7,11 @@ export default function Achievements() {
     },
     {
       title: "Dean's List",
+      description: 'AY2025/2026 Semester 1',
+      icon: '🏆',
+    },
+    {
+      title: "Dean's List",
       description: 'AY2024/2025 Semester 2',
       icon: '🏆',
     },
