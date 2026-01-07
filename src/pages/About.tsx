@@ -39,8 +39,8 @@ export default function About() {
                 <div className="flex flex-wrap gap-2">
                   {[
                     "Java",
-                    "JavaScript",
                     "TypeScript",
+                    "JavaScript",
                     "Go",
                     "Python",
                     "C",
@@ -83,7 +83,7 @@ export default function About() {
                   Backend & Databases
                 </h3>
                 <div className="flex flex-wrap gap-2">
-                  {["PostgreSQL (Supabase)"].map((tech) => (
+                  {["PostgreSQL (Supabase)", "RESTful APIs"].map((tech) => (
                     <span
                       key={tech}
                       className="px-4 py-2 bg-teal-50 dark:bg-vscode-bg-lighter text-teal-700 dark:text-vscode-accent rounded-lg text-sm font-medium hover:bg-teal-100 dark:hover:bg-vscode-bg-lightest hover:scale-105 transition-all cursor-default"

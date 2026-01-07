@@ -17,7 +17,7 @@ export default function Projects() {
       title: "Discussion Forum",
       description:
         "Building a full-stack discussion platform with user authentication, topic-based threads, and RESTful APIs. Developing backend services in Go with PostgreSQL, alongside a clean and intuitive React-based user interface for browsing and participating in discussions.",
-      techStack: ["Go", "PostgreSQL", "React"],
+      techStack: ["Go", "Gin", "PostgreSQL", "TypeScript", "React", "RestAPI"],
       period: "Dec 2025 – Present",
       image: "/forum.png",
       links: {

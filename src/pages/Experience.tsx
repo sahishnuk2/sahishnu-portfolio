@@ -1,44 +1,57 @@
 export default function Experience() {
   const teachingExperience = {
-    role: 'Teaching Assistant, CS2030S – Programming Methodology II',
-    organization: 'National University of Singapore',
-    period: 'Jan 2026 – Present',
+    role: "Teaching Assistant, CS2030S – Programming Methodology II",
+    organization: "National University of Singapore",
+    period: "Jan 2026 – Present",
     responsibilities: [
-      'Conducting lab sessions and consultations for undergraduate students',
-      'Grading programming assignments and providing constructive feedback',
-      'Explaining complex programming concepts and guiding students through problem-solving',
+      "Conducting lab sessions and consultations for undergraduate students",
+      "Grading programming assignments and providing constructive feedback",
+      "Explaining complex programming concepts and guiding students through problem-solving",
     ],
   };
 
   const workExperience = {
-    role: 'HQ 9 Div/Inf G2 Branch ASA',
-    organization: 'Singapore Armed Forces (SAF)',
-    period: 'July 2022 – May 2024',
+    role: "HQ 9 Div/Inf G2 Branch ASA",
+    organization: "Singapore Armed Forces (SAF)",
+    period: "July 2022 – May 2024",
     responsibilities: [
-      'Led administrative operations as Branch IC, managing personnel clearance processes, planning unit tours, and maintaining critical documentation workflows',
-      'Utilised Microsoft Excel to streamline data handling, track personnel movement, and generate operational reports, improving overall efficiency',
-      'Coordinated inter-departmental communication and scheduling, demonstrating strong organizational and stakeholder management skills',
+      "Led administrative operations as Branch IC, managing personnel clearance processes, planning unit tours, and maintaining critical documentation workflows",
+      "Utilised Microsoft Excel to streamline data handling, track personnel movement, and generate operational reports, improving overall efficiency",
+      "Coordinated inter-departmental communication and scheduling, demonstrating strong organizational and stakeholder management skills",
     ],
-    award: 'Best Soldier of the Month (June 2023)',
-    awardDescription: 'Awarded for outstanding leadership, discipline, and initiative',
+    award: "Best Soldier of the Month (June 2023)",
+    awardDescription:
+      "Awarded for outstanding leadership, discipline, and initiative",
   };
 
   const transferableSkills = [
     {
-      category: 'Teaching & Communication',
-      items: ['Clear Communication', 'Structured Problem-Solving', 'Mentoring & Guidance'],
+      category: "Teaching & Communication",
+      items: [
+        "Clear Communication",
+        "Structured Problem-Solving",
+        "Mentoring & Guidance",
+      ],
     },
     {
-      category: 'Leadership & Coordination',
-      items: ['Team Leadership', 'Stakeholder Management', 'Inter-departmental Communication'],
+      category: "Leadership & Coordination",
+      items: [
+        "Team Leadership",
+        "Stakeholder Management",
+        "Inter-departmental Communication",
+      ],
     },
     {
-      category: 'Technical & Administrative',
-      items: ['Data Management (Excel)', 'Process Optimization', 'Documentation Management'],
+      category: "Technical & Administrative",
+      items: [
+        "Data Management (Excel)",
+        "Process Optimization",
+        "Documentation Management",
+      ],
     },
     {
-      category: 'Soft Skills',
-      items: ['Problem Solving', 'Organization', 'Initiative & Discipline'],
+      category: "Soft Skills",
+      items: ["Problem Solving", "Organization", "Initiative & Discipline"],
     },
   ];
 
@@ -49,7 +62,8 @@ export default function Experience() {
           Experience
         </h1>
         <p className="text-lg text-gray-600 dark:text-vscode-text-muted mb-12">
-          Professional and teaching experience demonstrating technical expertise, leadership, and communication skills
+          Professional and teaching experience demonstrating technical
+          expertise, leadership, and communication skills
         </p>
 
         {/* Teaching Experience Section */}
@@ -67,29 +81,33 @@ export default function Experience() {
                   {teachingExperience.organization}
                 </p>
               </div>
-              <span className="text-gray-600 dark:text-vscode-text-muted mt-2 md:mt-0">
+              <span className="text-gray-600 dark:text-vscode-text-muted mt-2 md:mt-0 whitespace-nowrap">
                 {teachingExperience.period}
               </span>
             </div>
 
             {/* Responsibilities */}
             <div className="space-y-3">
-              {teachingExperience.responsibilities.map((responsibility, index) => (
-                <div key={index} className="flex items-start gap-3">
-                  <svg
-                    className="w-5 h-5 text-teal-600 dark:text-vscode-accent mt-0.5 flex-shrink-0"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                  <p className="text-gray-700 dark:text-vscode-text">{responsibility}</p>
-                </div>
-              ))}
+              {teachingExperience.responsibilities.map(
+                (responsibility, index) => (
+                  <div key={index} className="flex items-start gap-3">
+                    <svg
+                      className="w-5 h-5 text-teal-600 dark:text-vscode-accent mt-0.5 flex-shrink-0"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                        clipRule="evenodd"
+                      />
+                    </svg>
+                    <p className="text-gray-700 dark:text-vscode-text">
+                      {responsibility}
+                    </p>
+                  </div>
+                )
+              )}
             </div>
           </div>
         </div>
@@ -129,7 +147,9 @@ export default function Experience() {
                       clipRule="evenodd"
                     />
                   </svg>
-                  <p className="text-gray-700 dark:text-vscode-text">{responsibility}</p>
+                  <p className="text-gray-700 dark:text-vscode-text">
+                    {responsibility}
+                  </p>
                 </div>
               ))}
             </div>
