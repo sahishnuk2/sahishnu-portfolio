@@ -14,11 +14,22 @@ interface Project {
 export default function Projects() {
   const projects: Project[] = [
     {
+      title: "Professional Ghoster",
+      description:
+        "A Telegram bot that generates contextual replies when you're unsure how to respond in a chat. When invoked, it reads the last 50 messages in the conversation and the last 10 messages from the caller, then uses Groq AI to craft a reply that mimics the caller's own tone and writing style.",
+      techStack: ["Python", "Telegram API", "Groq", "PostgreSQL"],
+      period: "Jan 2026",
+      image: "/ghost.png",
+      links: {
+        github: "https://github.com/sahishnuk2/professional-ghoster",
+      },
+    },
+    {
       title: "Discussion Forum",
       description:
         "Building a full-stack discussion platform with user authentication, topic-based threads, and RESTful APIs. Developing backend services in Go with PostgreSQL, alongside a clean and intuitive React-based user interface for browsing and participating in discussions.",
       techStack: ["Go", "Gin", "PostgreSQL", "TypeScript", "React", "RestAPI"],
-      period: "Dec 2025 – Present",
+      period: "Dec 2025 – Jan 2026",
       image: "/forum.png",
       links: {
         github: "https://github.com/sahishnuk2/web-forum",
